@@ -23,10 +23,43 @@ public class AppTest {
 	}
 
 	@Test
-	public void check_Nottriangle() {
+	public void check_Nottriangle1() {
 		int a = 2;
 		int b = 2;
 		int c = 4;
+		triangle.classifyTriangle(a, b, c);
+		String expected = Triangle_Types.Nottriangle.toString();
+		String result = triangle.get_type().toString();
+		assertEquals(expected, result.toString());
+	}
+	
+	@Test
+	public void check_Nottriangle2() {
+		int a = 2;
+		int b = 4;
+		int c = 2;
+		triangle.classifyTriangle(a, b, c);
+		String expected = Triangle_Types.Nottriangle.toString();
+		String result = triangle.get_type().toString();
+		assertEquals(expected, result.toString());
+	}
+	
+	@Test
+	public void check_Nottriangle3() {
+		int a = 4;
+		int b = 2;
+		int c = 2;
+		triangle.classifyTriangle(a, b, c);
+		String expected = Triangle_Types.Nottriangle.toString();
+		String result = triangle.get_type().toString();
+		assertEquals(expected, result.toString());
+	}
+	
+	@Test
+	public void check_Nottriangle4() {
+		int a = 1;
+		int b = 2;
+		int c = 3;
 		triangle.classifyTriangle(a, b, c);
 		String expected = Triangle_Types.Nottriangle.toString();
 		String result = triangle.get_type().toString();
@@ -45,7 +78,7 @@ public class AppTest {
 	}
 
 	@Test
-	public void check_Isosceles() {
+	public void check_Isosceles1() {
 		int a = 3;
 		int b = 4;
 		int c = 4;
@@ -54,5 +87,29 @@ public class AppTest {
 		String result = triangle.get_type().toString();
 		assertEquals(expected, result.toString());
 	}
+	
+	@Test
+	public void check_Isosceles2() {
+		int a = 4;
+		int b = 3;
+		int c = 4;
+		triangle.classifyTriangle(a, b, c);
+		String expected = Triangle_Types.isosceles.toString();
+		String result = triangle.get_type().toString();
+		assertEquals(expected, result.toString());
+	}
+	
+	@Test
+	public void check_Isosceles3() {
+		int a = 4;
+		int b = 4;
+		int c = 3;
+		triangle.classifyTriangle(a, b, c);
+		String expected = Triangle_Types.isosceles.toString();
+		String result = triangle.get_type().toString();
+		assertEquals(expected, result.toString());
+	}
+	
+	
 
 }
